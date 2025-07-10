@@ -143,7 +143,7 @@ export const AddExpenseModal: React.FC<AddExpenseModalProps> = ({
             
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="amount">Amount ($)</Label>
+                <Label htmlFor="amount">Amount (₹)</Label>
                 <Input
                   id="amount"
                   type="number"
@@ -242,7 +242,7 @@ export const AddExpenseModal: React.FC<AddExpenseModalProps> = ({
                         <div className="text-right">
                           {splitType === 'equal' ? (
                             <div className="text-lg font-semibold text-green-600">
-                              ${calculateEqualSplit().toFixed(2)}
+                              ₹{calculateEqualSplit().toFixed(2)}
                             </div>
                           ) : (
                             <Input
@@ -271,14 +271,14 @@ export const AddExpenseModal: React.FC<AddExpenseModalProps> = ({
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="text-sm text-gray-600">Total Amount</p>
-                    <p className="text-2xl font-bold text-blue-600">${amount || '0.00'}</p>
+                    <p className="text-2xl font-bold text-blue-600">₹{amount || '0.00'}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-gray-600">
                       {splitType === 'equal' ? 'Per Person' : 'Custom Total'}
                     </p>
                     <p className="text-2xl font-bold text-purple-600">
-                      ${splitType === 'equal' 
+                      ₹{splitType === 'equal' 
                         ? calculateEqualSplit().toFixed(2) 
                         : getTotalCustomAmount().toFixed(2)
                       }

@@ -101,7 +101,7 @@ const Index = () => {
     setExpenses(prev => [newExpense, ...prev]);
     toast({
       title: "Expense Added Successfully",
-      description: `${expense.description} for $${expense.amount.toFixed(2)}`,
+      description: `${expense.description} for ₹${expense.amount.toFixed(2)}`,
     });
   };
 
@@ -195,7 +195,7 @@ const Index = () => {
                   <CardTitle className="text-sm font-medium text-blue-100">Total Expenses</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold">${totalExpenses.toFixed(2)}</div>
+                  <div className="text-3xl font-bold">₹{totalExpenses.toFixed(2)}</div>
                   <p className="text-sm text-blue-100 mt-1">{expenses.length} transactions</p>
                 </CardContent>
               </Card>
@@ -206,7 +206,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <div className={`text-3xl font-bold ${myBalance >= 0 ? 'text-green-100' : 'text-red-100'}`}>
-                    ${Math.abs(myBalance).toFixed(2)}
+                    ₹{Math.abs(myBalance).toFixed(2)}
                   </div>
                   <p className="text-sm text-purple-100 mt-1">
                     {myBalance >= 0 ? 'You are owed' : 'You owe'}

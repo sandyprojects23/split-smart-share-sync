@@ -84,7 +84,7 @@ export const ExpenseHistory: React.FC<ExpenseHistoryProps> = ({ expenses, users 
                       <span className="text-gray-700">{getUserName(participant.userId)}</span>
                       <span className="text-gray-500">•</span>
                       <span className="font-medium text-green-600">
-                        ${participant.amount.toFixed(2)}
+                        ₹{participant.amount.toFixed(2)}
                       </span>
                     </div>
                   ))}
@@ -93,7 +93,7 @@ export const ExpenseHistory: React.FC<ExpenseHistoryProps> = ({ expenses, users 
 
               <div className="text-right ml-4">
                 <div className="text-2xl font-bold text-gray-900">
-                  ${expense.amount.toFixed(2)}
+                  ₹{expense.amount.toFixed(2)}
                 </div>
                 <div className="text-sm text-gray-500">
                   {expense.splitType === 'equal' ? 'Split Equally' : 'Custom Split'}

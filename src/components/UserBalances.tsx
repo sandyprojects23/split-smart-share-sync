@@ -53,7 +53,7 @@ export const UserBalances: React.FC<UserBalancesProps> = ({ balances, users, det
                   <div className={`text-2xl font-bold ${
                     isZero ? 'text-gray-500' : isPositive ? 'text-green-600' : 'text-red-600'
                   }`}>
-                    ${Math.abs(balance.netBalance).toFixed(2)}
+                    ₹{Math.abs(balance.netBalance).toFixed(2)}
                   </div>
                   <div className="flex items-center space-x-1 text-sm">
                     {isZero ? (
@@ -89,7 +89,7 @@ export const UserBalances: React.FC<UserBalancesProps> = ({ balances, users, det
                               <ArrowRight className="h-4 w-4 text-red-500" />
                               <span className="text-sm text-gray-700">{getUserName(userId)}</span>
                             </div>
-                            <span className="font-medium text-red-600">${amount.toFixed(2)}</span>
+                            <span className="font-medium text-red-600">₹{amount.toFixed(2)}</span>
                           </div>
                         ))}
                       </div>
@@ -107,7 +107,7 @@ export const UserBalances: React.FC<UserBalancesProps> = ({ balances, users, det
                               <ArrowRight className="h-4 w-4 text-green-500" />
                               <span className="text-sm text-gray-700">{getUserName(userId)}</span>
                             </div>
-                            <span className="font-medium text-green-600">${amount.toFixed(2)}</span>
+                            <span className="font-medium text-green-600">₹{amount.toFixed(2)}</span>
                           </div>
                         ))}
                       </div>
